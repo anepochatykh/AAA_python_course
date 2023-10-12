@@ -7,6 +7,9 @@
 # - Слабые стороны: Ground
 
 
+# добавим некоторые действия к покемону
+
+
 # Tuple
 tuple_pokemon = ('Pikachu', 'Mouse', 5.99, 40.64, ['Electric'], ['Ground'])
 

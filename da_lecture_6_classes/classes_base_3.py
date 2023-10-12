@@ -6,6 +6,9 @@
 # - Сильные стороны: Electric
 # - Слабые стороны: Ground
 
+
+# добавим Iron Man 
+
 # iron man
 # - Iron Man
 # - Рост: 180 см
@@ -78,8 +81,10 @@ class Pokemon:
 
 	def grow(self, extra_height):
 		self.height += extra_height
-pokemon = Pokemon(name='Pikachu', category='Mouse', height=40.64, 
-		  weight=5.99,strengths=['Electric'], weaknesses=['Ground'],)
+pokemon = Pokemon(
+	name='Pikachu', category='Mouse', height=40.64, 
+	weight=5.99,strengths=['Electric'], weaknesses=['Ground'],
+)
 pokemon.grow(10)
 
 
