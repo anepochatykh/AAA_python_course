@@ -81,6 +81,7 @@ class Pokemon:
 
 	def grow(self, extra_height):
 		self.height += extra_height
+
 pokemon = Pokemon(
 	name='Pikachu', category='Mouse', height=40.64, 
 	weight=5.99,strengths=['Electric'], weaknesses=['Ground'],
@@ -100,3 +101,4 @@ class IronMan:
 	
 iron_man = IronMan(name='Iron Man', height=180, weight=300, speed=200)
 iron_man.speed_up(100)
+iron_man.grow()

@@ -1,21 +1,36 @@
-class CountVectorizer:
-    stop_words = ('a', 'b', 'c')
+class BaseClass:
+	def __init__(self, base_param=None):
+		self.base_param = base_param
+	
 
+class CountVectorizer(BaseClass):
     def __init__(self, lowercase=True):
+        super().__init__(base_param=lowercase)
         self.lowercase = lowercase
-        self._vocabulary = {}
 
-    def get_stop_words(self):
-        return self.stop_words + ('d', 'e', 'f')
+
+class Person:
+    def __init__(self):
+        self.first_name = 'John'
+        self.last_name = 'Doe'
+
+    @property
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+
+import sys
+
+tuple_pokemon = ('Pikachu', 'Mouse', 5.99, 40.64, ['Electric'], ['Ground'])
+
+# Dict
+dict_pokemon = {
+	'name': 'Pikachu', 'category': 'Mouse', 'height': 40.64,
+	'weight': 5.99, 'strengths': ['Electric'], 'weaknesses': ['Ground'],
+}
+
 
 if __name__ == '__main__':
-    c = CountVectorizer()
-    d = CountVectorizer()
-
-    print(CountVectorizer.get_stop_words)
-    print()
-    print(c.get_stop_words)
-    print()
-    print(d.get_stop_words)
-    print(c.get_stop_words == d.get_stop_words)
-    print(c.__class__.get_stop_words == d.__class__.get_stop_words)
+    print(sys.getsizeof(tuple_pokemon))
+    print(sys.getsizeof(dict_pokemon))
+    print(tuple_pokemon[4])
